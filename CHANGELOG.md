@@ -17,6 +17,7 @@
 * Updated C++ language standard (gnu++0x → gnu++17)
 * Updated C language standard (gnu99 → gnu11)
 * Enhanced module system with proper umbrella header organization
+* Fixed compiler warnings: replaced deprecated `kCTFontHorizontalOrientation` with `0.0` and added nullability annotations throughout the codebase
 * Updated CI/CD configuration for modern Xcode and SDK versions
 * Added GitHub Actions workflow alongside Travis CI
 

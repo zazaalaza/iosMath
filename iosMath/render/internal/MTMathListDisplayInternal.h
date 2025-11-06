@@ -29,9 +29,9 @@
 
 @interface MTMathListDisplay ()
 
-- (instancetype)init NS_UNAVAILABLE;
+- (instancetype _Nonnull )init NS_UNAVAILABLE;
 
-- (instancetype) initWithDisplays:(NSArray<MTDisplay*>*) displays range:(NSRange) range NS_DESIGNATED_INITIALIZER;
+- (instancetype _Nonnull ) initWithDisplays:(NSArray<MTDisplay*>*_Nonnull) displays range:(NSRange) range NS_DESIGNATED_INITIALIZER;
 
 @property (nonatomic, readwrite) MTLinePosition type;
 @property (nonatomic, readwrite) NSUInteger index;
@@ -40,17 +40,17 @@
 
 @interface MTCTLineDisplay ()
 
-- (instancetype)initWithString:(NSAttributedString*) attrString position:(CGPoint)position range:(NSRange) range font:(MTFont*) font atoms:(NSArray<MTMathAtom*>*) atoms NS_DESIGNATED_INITIALIZER;
+- (instancetype _Nonnull )initWithString:(NSAttributedString*_Nonnull) attrString position:(CGPoint)position range:(NSRange) range font:(MTFont*_Nonnull) font atoms:(NSArray<MTMathAtom*>*_Nonnull) atoms NS_DESIGNATED_INITIALIZER;
 
-- (instancetype)init NS_UNAVAILABLE;
+- (instancetype _Nonnull )init NS_UNAVAILABLE;
 
 @end
 
 @interface MTFractionDisplay ()
 
-- (instancetype)initWithNumerator:(MTMathListDisplay*) numerator denominator:(MTMathListDisplay*) denominator position:(CGPoint) position range:(NSRange) range NS_DESIGNATED_INITIALIZER;
+- (instancetype _Nonnull )initWithNumerator:(MTMathListDisplay*_Nonnull) numerator denominator:(MTMathListDisplay*_Nonnull) denominator position:(CGPoint) position range:(NSRange) range NS_DESIGNATED_INITIALIZER;
 
-- (instancetype)init NS_UNAVAILABLE;
+- (instancetype _Nonnull )init NS_UNAVAILABLE;
 
 @property (nonatomic) CGFloat numeratorUp;
 @property (nonatomic) CGFloat denominatorDown;
@@ -61,9 +61,9 @@
 
 @interface MTRadicalDisplay ()
 
-- (instancetype)initWitRadicand:(MTMathListDisplay*) radicand glpyh:(MTDisplay*) glyph position:(CGPoint) position range:(NSRange) range NS_DESIGNATED_INITIALIZER;
+- (instancetype _Nonnull )initWitRadicand:(MTMathListDisplay*_Nonnull) radicand glpyh:(MTDisplay*_Nonnull) glyph position:(CGPoint) position range:(NSRange) range NS_DESIGNATED_INITIALIZER;
 
-- (void) setDegree:(MTMathListDisplay *)degree fontMetrics:(MTFontMathTable*) fontMetrics;
+- (void) setDegree:(MTMathListDisplay *_Nonnull)degree fontMetrics:(MTFontMathTable*_Nonnull) fontMetrics;
 
 @property (nonatomic) CGFloat topKern;
 @property (nonatomic) CGFloat lineThickness;
@@ -73,23 +73,23 @@
 // Rendering of an large glyph as an MTDisplay
 @interface MTGlyphDisplay() <DownShift>
 
-- (instancetype)initWithGlpyh:(CGGlyph) glyph range:(NSRange) range font:(MTFont*) font NS_DESIGNATED_INITIALIZER;
+- (instancetype _Nonnull )initWithGlpyh:(CGGlyph) glyph range:(NSRange) range font:(MTFont*_Nonnull) font NS_DESIGNATED_INITIALIZER;
 
 @end
 
 // Rendering of a constructed glyph as an MTDisplay
 @interface MTGlyphConstructionDisplay : MTDisplay<DownShift>
 
-- (instancetype) init NS_UNAVAILABLE;
-- (instancetype) initWithGlyphs:(NSArray<NSNumber*>*) glyphs offsets:(NSArray<NSNumber*>*) offsets font:(MTFont*) font NS_DESIGNATED_INITIALIZER;
+- (instancetype _Nonnull ) init NS_UNAVAILABLE;
+- (instancetype _Nonnull ) initWithGlyphs:(NSArray<NSNumber*>*_Nonnull) glyphs offsets:(NSArray<NSNumber*>*_Nonnull) offsets font:(MTFont*_Nonnull) font NS_DESIGNATED_INITIALIZER;
 
 @end
 
 @interface MTLargeOpLimitsDisplay ()
 
-- (instancetype) initWithNucleus:(MTDisplay*) nucleus upperLimit:(MTMathListDisplay*) upperLimit lowerLimit:(MTMathListDisplay*) lowerLimit limitShift:(CGFloat) limitShift extraPadding:(CGFloat) extraPadding NS_DESIGNATED_INITIALIZER;
+- (instancetype _Nonnull ) initWithNucleus:(MTDisplay*_Nonnull) nucleus upperLimit:(MTMathListDisplay*_Nonnull) upperLimit lowerLimit:(MTMathListDisplay*_Nonnull) lowerLimit limitShift:(CGFloat) limitShift extraPadding:(CGFloat) extraPadding NS_DESIGNATED_INITIALIZER;
 
-- (instancetype)init NS_UNAVAILABLE;
+- (instancetype _Nonnull )init NS_UNAVAILABLE;
 
 @property (nonatomic) CGFloat upperLimitGap;
 @property (nonatomic) CGFloat lowerLimitGap;
@@ -98,7 +98,7 @@
 
 @interface MTLineDisplay ()
 
-- (instancetype)initWithInner:(MTMathListDisplay*) inner position:(CGPoint) position range:(NSRange) range NS_DESIGNATED_INITIALIZER;
+- (instancetype _Nonnull )initWithInner:(MTMathListDisplay*_Nonnull) inner position:(CGPoint) position range:(NSRange) range NS_DESIGNATED_INITIALIZER;
 
 // How much the line should be moved up.
 @property (nonatomic) CGFloat lineShiftUp;
@@ -108,16 +108,16 @@
 
 @interface MTAccentDisplay ()
 
-- (instancetype)initWithAccent:(MTGlyphDisplay*) glyph accentee:(MTMathListDisplay*) accentee range:(NSRange) range NS_DESIGNATED_INITIALIZER;
+- (instancetype _Nonnull )initWithAccent:(MTGlyphDisplay*_Nonnull) glyph accentee:(MTMathListDisplay*_Nonnull) accentee range:(NSRange) range NS_DESIGNATED_INITIALIZER;
 
 @end
 
 
 @interface MTInnerDisplay ()
 
-- (instancetype) initWithInner:(MTMathListDisplay*) inner leftDelimiter:(MTDisplay*) leftDelimiter rightDelimiter:(MTDisplay*) rightDelimiter atIndex:(NSUInteger) index NS_DESIGNATED_INITIALIZER;
+- (instancetype _Nonnull ) initWithInner:(MTMathListDisplay*_Nonnull) inner leftDelimiter:(MTDisplay*_Nonnull) leftDelimiter rightDelimiter:(MTDisplay*_Nullable) rightDelimiter atIndex:(NSUInteger) index NS_DESIGNATED_INITIALIZER;
 
-@property (nonatomic) MTMathListDisplay* inner;
+@property (nonatomic) MTMathListDisplay* _Nonnull inner;
 
 @property (nonatomic, nullable) MTDisplay* leftDelimiter;
 @property (nonatomic, nullable) MTDisplay* rightDelimiter;
