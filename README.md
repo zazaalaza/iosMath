@@ -30,7 +30,7 @@ library:
 The [EXAMPLES.md](./EXAMPLES.md) file contains more examples.
  
 ## Requirements
-`iosMath` works on iOS 6+ or MacOS 10.8+ and requires ARC to build. It depends
+`iosMath` works on iOS 17.0+ or macOS 14.0+ and requires ARC to build. It depends
 on the following Apple frameworks:
 
 * Foundation.framework
@@ -46,6 +46,23 @@ Additionally for MacOS it requires:
 
 ## Installation
 
+### Swift Package Manager
+
+iosMath is available through Swift Package Manager. To install it:
+
+1. In Xcode, go to **File** → **Add Packages...**
+2. Enter the repository URL: `https://github.com/zazaalaza/iosMath.git`
+3. Select the version you want to use
+4. Add the package to your target
+
+Alternatively, add it to your `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/zazaalaza/iosMath.git", from: "0.9.5")
+]
+```
+
 ### Cocoapods
 
 iosMath is available through [CocoaPods](http://cocoapods.org). To install
@@ -59,6 +76,8 @@ it:
 You can also add iosMath as a static library to your project or
 workspace.
 
+**Note:** Your project must target iOS 17.0+ or macOS 14.0+ to use this library.
+
 1. Download the [latest code version](https://github.com/kostub/iosMath/downloads) or add the
 repository as a git submodule to your git-tracked project.
 2. Open your project in Xcode, then drag and drop
@@ -70,6 +89,7 @@ add `libIosMath.a`. You might also need to add `iosMath` to
 the Target Dependencies list.
 4. Add the `MathFontBundle` to the list of `Copy Bundle Resources`.
 5. Include IosMath wherever you need it with `#import <IosMath/IosMath.h>`.
+6. **Important:** Ensure your project's deployment target is set to iOS 17.0+ (or macOS 14.0+).
 
 ## Usage
 

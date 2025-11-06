@@ -1,5 +1,41 @@
 ## Changelog
 
+### v0.9.6 (2025-01-XX) - iOS 26.1 Compatibility Update
+
+**⚠️ BREAKING CHANGES:**
+
+* **Minimum iOS version increased**: iOS 17.0+ required (previously iOS 6.0+)
+* **Minimum macOS version increased**: macOS 14.0+ required (previously macOS 10.8+)
+
+**Changes:**
+
+* Updated deployment targets to iOS 17.0 and macOS 14.0 for iOS 26.1 compatibility
+* Fixed deprecated macOS `graphicsPort` API (now uses `CGContext` property)
+* Removed obsolete iOS version checking code
+* Updated Swift Package Manager configuration with proper platform specifications
+* Modernized Xcode project format (version 46 → 56)
+* Updated C++ language standard (gnu++0x → gnu++17)
+* Updated C language standard (gnu99 → gnu11)
+* Enhanced module system with proper umbrella header organization
+* Updated CI/CD configuration for modern Xcode and SDK versions
+* Added GitHub Actions workflow alongside Travis CI
+
+**Migration Guide:**
+
+If you're upgrading from an earlier version:
+
+1. **Update your project's deployment target** to iOS 17.0+ (or macOS 14.0+)
+2. **Update your Podfile** - no changes needed, but ensure your project targets iOS 17.0+
+3. **Swift Package Manager users** - the package now properly specifies platform requirements
+4. **No API changes** - all existing APIs remain compatible
+
+**Technical Details:**
+
+* Fixed macOS graphics context deprecation (`NSGraphicsContext.graphicsPort` → `CGContext`)
+* Removed `isIos6Supported()` function (no longer needed)
+* Updated all Xcode project deployment targets
+* Improved module header organization
+
 ### v0.9.5 (2019-06-03)
 * Add colorbox command (#121)
 * Cyrillic support (#108)
