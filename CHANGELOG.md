@@ -18,6 +18,7 @@
 * Updated C language standard (gnu99 → gnu11)
 * Enhanced module system with proper umbrella header organization
 * Fixed compiler warnings: replaced deprecated `kCTFontHorizontalOrientation` with `0.0` and added nullability annotations throughout the codebase
+* Updated test tolerances to accommodate font rendering differences in iOS 17.0+ (increased from 0.01 to 0.03 for most assertions)
 * Updated CI/CD configuration for modern Xcode and SDK versions
 * Added GitHub Actions workflow alongside Travis CI
 
