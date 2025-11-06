@@ -12,7 +12,7 @@
 * Updated deployment targets to iOS 17.0 and macOS 14.0 for iOS 26.1 compatibility
 * Fixed deprecated macOS `graphicsPort` API (now uses `CGContext` property)
 * Removed obsolete iOS version checking code
-* Updated Swift Package Manager configuration with proper platform specifications
+* Updated Swift Package Manager configuration with proper platform specifications and module map
 * Modernized Xcode project format (version 46 → 56)
 * Updated C++ language standard (gnu++0x → gnu++17)
 * Updated C language standard (gnu99 → gnu11)
