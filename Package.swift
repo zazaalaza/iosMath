@@ -27,9 +27,6 @@ let package = Package(
             name: "iosMath",
             dependencies: [],
             path: "iosMath",
-            exclude: [
-                "render/internal"
-            ],
             publicHeadersPath: "include",
             cSettings: [
                 .headerSearchPath("."),
