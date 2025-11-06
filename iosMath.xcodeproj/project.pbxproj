@@ -857,6 +857,7 @@
 			baseConfigurationReference = BB4250423755E0D3CD2BA614 /* Pods-iosMathTests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "iosMathTests/iosMathTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "MathChat.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -867,6 +868,7 @@
 			baseConfigurationReference = 964660A84E6FEDD150C994C8 /* Pods-iosMathTests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "iosMathTests/iosMathTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "MathChat.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

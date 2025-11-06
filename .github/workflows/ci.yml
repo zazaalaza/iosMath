@@ -1,0 +1,77 @@
+name: CI
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  test-ios:
+    name: iOS Tests
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Select Xcode
+        run: sudo xcode-select -switch /Applications/Xcode_16.0.app/Contents/Developer
+      
+      - name: Setup CocoaPods
+        run: |
+          gem install cocoapods
+          pod --version
+      
+      - name: Install Dependencies
+        run: pod install
+      
+      - name: Build and Test iOS
+        run: |
+          xcodebuild clean build test \
+            -workspace iosMath.xcworkspace \
+            -scheme iosMath \
+            -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.0' \
+            -sdk iphonesimulator \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            ONLY_ACTIVE_ARCH=NO
+
+  test-macos:
+    name: macOS Tests
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Select Xcode
+        run: sudo xcode-select -switch /Applications/Xcode_16.0.app/Contents/Developer
+      
+      - name: Setup CocoaPods
+        run: |
+          gem install cocoapods
+          pod --version
+      
+      - name: Install Dependencies
+        run: pod install
+      
+      - name: Build macOS
+        run: |
+          xcodebuild clean build \
+            -workspace iosMath.xcworkspace \
+            -scheme MacOSMath \
+            -destination 'platform=macOS' \
+            -sdk macosx \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO
+
+  build-spm:
+    name: Swift Package Manager Build
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Select Xcode
+        run: sudo xcode-select -switch /Applications/Xcode_16.0.app/Contents/Developer
+      
+      - name: Build with SPM
+        run: |
+          swift build -c release
+
