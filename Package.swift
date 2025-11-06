@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "iosMath",
+    defaultLocalization: "en",
     platforms: [
         .iOS(.v17),
         .macOS(.v14)
@@ -26,7 +27,6 @@ let package = Package(
             name: "iosMath",
             dependencies: [],
             path: "iosMath",
-            publicHeadersPath: ".",
             cSettings: [
                 .headerSearchPath("."),
                 .headerSearchPath("render"),
