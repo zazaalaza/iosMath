@@ -11,8 +11,8 @@ beautifully rendered math equations in iOS/MacOS applications.
   s.homepage     = "https://github.com/kostub/iosMath"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Kostub Deshmukh" => "kostub@gmail.com" }
-  s.ios.deployment_target = '6.0'
-  s.osx.deployment_target = '10.8'
+  s.ios.deployment_target = '17.0'
+  s.osx.deployment_target = '14.0'
   s.source       = { :git => "https://github.com/kostub/iosMath.git", :tag => s.version.to_s }
   s.source_files = 'iosMath/**/*.{h,m}'
   s.private_header_files = 'iosMath/render/internal/*.h'
