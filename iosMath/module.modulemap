@@ -1,4 +1,4 @@
-module iosMath {
+git module iosMath {
     umbrella header "IosMath.h"
     export *
     module * { export * }
