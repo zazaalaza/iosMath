@@ -25,9 +25,19 @@ let package = Package(
         .target(
             name: "iosMath",
             dependencies: [],
-            path: "./"),
+            path: "iosMath",
+            publicHeadersPath: ".",
+            cSettings: [
+                .headerSearchPath("."),
+                .headerSearchPath("render"),
+                .headerSearchPath("render/internal"),
+                .headerSearchPath("lib")
+            ]
+        ),
         .testTarget(
             name: "iosMathTests",
-            dependencies: ["iosMath"]),
+            dependencies: ["iosMath"],
+            path: "iosMathTests"
+        ),
     ]
 )
