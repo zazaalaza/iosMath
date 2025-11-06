@@ -21,6 +21,7 @@
 * Updated test tolerances to accommodate font rendering differences in iOS 17.0+ (increased from 0.01 to 0.03 for most assertions)
 * Updated CI/CD configuration for modern Xcode and SDK versions
 * Added GitHub Actions workflow alongside Travis CI
+* Fixed Swift Package Manager compatibility: corrected umbrella header import paths and added missing UIKit import to UIColor+HexString category
 
 **Migration Guide:**
 

@@ -16,17 +16,17 @@ FOUNDATION_EXPORT double iosMathVersionNumber;
 FOUNDATION_EXPORT const unsigned char iosMathVersionString[];
 
 // Main public API - Math rendering view
-#import <IosMath/MTMathUILabel.h>
+#import "MTMathUILabel.h"
 
 // Core math data structures
-#import <IosMath/MTMathList.h>
-#import <IosMath/MTMathListBuilder.h>
-#import <IosMath/MTMathListDisplay.h>
+#import "MTMathList.h"
+#import "MTMathListBuilder.h"
+#import "MTMathListDisplay.h"
 
 // Font management
-#import <IosMath/MTFont.h>
-#import <IosMath/MTFontManager.h>
+#import "MTFont.h"
+#import "MTFontManager.h"
 
 // Advanced APIs for programmatic math list creation
-#import <IosMath/MTMathAtomFactory.h>
-#import <IosMath/MTMathListIndex.h>
+#import "MTMathAtomFactory.h"
+#import "MTMathListIndex.h"
