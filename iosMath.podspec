@@ -8,12 +8,12 @@ CoreText. It renders formulae written in latex in a UILabel equivalent
 class using the same typsetting rules as latex. This enables displaying
 beautifully rendered math equations in iOS/MacOS applications.
                    DESC
-  s.homepage     = "https://github.com/kostub/iosMath"
+  s.homepage     = "https://github.com/zazaalaza/iosMath"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Kostub Deshmukh" => "kostub@gmail.com" }
   s.ios.deployment_target = '17.0'
   s.osx.deployment_target = '14.0'
-  s.source       = { :git => "https://github.com/kostub/iosMath.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/zazaalaza/iosMath.git", :tag => s.version.to_s }
   s.source_files = 'iosMath/**/*.{h,m}'
   s.private_header_files = 'iosMath/render/internal/*.h'
   s.resource_bundles = {
