@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -492,12 +492,22 @@
 			attributes = {
 				LastTestingUpgradeCheck = 0630;
 				LastUpgradeCheck = 0940;
+				TargetAttributes = {
+					49965EFB17CBBA2700A555C5 = {
+						DevelopmentTeam = 2KTT9V4HY7;
+						ProvisioningStyle = Automatic;
+					};
+					49965F1B17CBBA2700A555C5 = {
+						DevelopmentTeam = 2KTT9V4HY7;
+					};
+				};
 			};
 			buildConfigurationList = 49965EF717CBBA2700A555C5 /* Build configuration list for PBXProject "iosMath" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 49965EF317CBBA2700A555C5;
@@ -575,8 +585,8 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iosMathTests/Pods-iosMathTests-resources.sh",
-        "${PODS_CONFIGURATION_BUILD_DIR}/iosMath-iOS6.0/mathFonts.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-iosMathTests/Pods-iosMathTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/iosMath-iOS/mathFonts.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -584,7 +594,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosMathTests/Pods-iosMathTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iosMathTests/Pods-iosMathTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C897D2526C33F372299D91F4 /* [CP] Copy Pods Resources */ = {
@@ -593,8 +603,8 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iosMathExample/Pods-iosMathExample-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/iosMath-iOS9.0/mathFonts.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-iosMathExample/Pods-iosMathExample-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/iosMath-iOS/mathFonts.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -602,7 +612,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosMathExample/Pods-iosMathExample-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iosMathExample/Pods-iosMathExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E29EDA86FBD87D988339E97B /* [CP] Check Pods Manifest.lock */ = {
@@ -819,12 +829,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D93290960585498BBAEE4535 /* Pods-iosMathExample.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T984FR9Q54;
+				DEVELOPMENT_TEAM = 2KTT9V4HY7;
 				INFOPLIST_FILE = "iosMathExample/iosMath-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				PRODUCT_BUNDLE_IDENTIFIER = rotpanda.MathChat.iosMathExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zalanjozsa.iosMathExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -836,12 +846,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B16B9A63054AE3FFB5C36F6B /* Pods-iosMathExample.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T984FR9Q54;
+				DEVELOPMENT_TEAM = 2KTT9V4HY7;
 				INFOPLIST_FILE = "iosMathExample/iosMath-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				PRODUCT_BUNDLE_IDENTIFIER = rotpanda.MathChat.iosMathExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zalanjozsa.iosMathExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -853,6 +863,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BB4250423755E0D3CD2BA614 /* Pods-iosMathTests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 2KTT9V4HY7;
 				INFOPLIST_FILE = "iosMathTests/iosMathTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "MathChat.${PRODUCT_NAME:rfc1034identifier}";
@@ -864,6 +875,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 964660A84E6FEDD150C994C8 /* Pods-iosMathTests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 2KTT9V4HY7;
 				INFOPLIST_FILE = "iosMathTests/iosMathTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "MathChat.${PRODUCT_NAME:rfc1034identifier}";

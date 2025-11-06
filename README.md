@@ -59,7 +59,7 @@ Alternatively, add it to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/zazaalaza/iosMath.git", from: "0.9.5")
+    .package(url: "https://github.com/zazaalaza/iosMath.git", from: "0.9.6")
 ]
 ```
 
