@@ -15,6 +15,7 @@ beautifully rendered math equations in iOS/MacOS applications.
   s.osx.deployment_target = '14.0'
   s.source       = { :git => "https://github.com/zazaalaza/iosMath.git", :tag => s.version.to_s }
   s.source_files = 'iosMath/**/*.{h,m}'
+  s.exclude_files = 'iosMath/include/**/*'
   s.private_header_files = 'iosMath/render/internal/*.h'
   s.resource_bundles = {
      'mathFonts' => [ 'fonts/*.otf', 'fonts/*.plist' ]
